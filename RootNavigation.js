@@ -1,7 +1,8 @@
-import {createStackNavigator, createAppContainer, createBottomTabNavigator} from 'react-navigation'
+import {createStackNavigator, createAppContainer, createBottomTabNavigator, create} from 'react-navigation'
 // SCREENS
 import Todo from './screens/Todo'
 import About from './screens/About'
+import Demo from './screens/Demo'
 import Secret from './screens/Secret'
 
 const TodoNav = createStackNavigator({
@@ -19,9 +20,12 @@ const RootNavigation = createBottomTabNavigator({
   },
   About: {
     screen: About
-  }
+  },
+  Demo: {
+    screen: Demo
+  },
 }, {
-  initialRouteName: 'Todo'
+  initialRouteName: 'Demo'
 })
 
 export default createAppContainer(RootNavigation)
